@@ -1,0 +1,41 @@
+<script>
+    var a = 0;
+function increaseCounterFunction()
+{
+    a++;
+    if (a == 2) a = 0;
+    document.getElementById("click").innerText = "counter value: " + a;
+    if (a == 0)
+        document.getElementById("buttonText").innerText = "TURN ON";
+    else 
+        document.getElementById("buttonText").innerText = "TURN OFF";
+}
+function hideDiv()
+{
+    document.getElementById("click").style.visibility = "show";
+   // alert("welcome to my page");
+}
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Button</title>
+        <style>
+        button{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body onload = "hideDiv()"> 
+   <div>
+        Press Button: <button id = "buttonText" onclick = "increaseCounterFunction()" name = "TURN ON">Turn On</button>
+   </div>
+   <div>
+       <label id = "click">counter value: 0</label>
+   </div>
+</body>
+</html>
